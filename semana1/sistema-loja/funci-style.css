@@ -1,0 +1,60 @@
+html,
+body,
+figure,
+img,
+div,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: #f9b24e;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(175, 170, 170);
+  padding-top: 10vh;
+}
+p {
+  text-align: center;
+  color: rgb(121, 118, 118);
+  margin: 10px 0px 100px;
+}
+a {
+  color: bisque;
+  font-style: italic;
+}
+#navegação {
+  margin: 10px 0px 80px 0px;
+  text-align: right;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.funcionarios{
+    color: rgb(143, 113, 68);
+    text-align:center ;
+    padding: auto;
+}
+ul{
+    padding: 30px;
+    color: aqua;
+    text-align: center;
+}
