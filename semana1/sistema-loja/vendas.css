@@ -1,0 +1,90 @@
+html,
+body,
+figure,
+img,
+div,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a,
+main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f9b24e;
+}
+
+h1 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(175, 170, 170);
+  padding-top: 10vh;
+}
+h3 {
+  display: block;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(175, 170, 170);
+  margin-bottom: 50px;
+}
+
+a {
+  color: bisque;
+  font-style: italic;
+}
+#navegação {
+  margin: 10px 0px 40px 0px;
+  text-align: right;
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+form {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+fieldset {
+  border: 0;
+  margin-bottom: 30px;
+}
+
+input,
+select,
+button
+ {
+  border-radius: 5px;
+  padding: 0.1em;
+  border: solid rgb(39, 36, 36);
+  box-shadow: 1px 2px 2px rgb(8, 5, 5);
+  
+  padding-left: 30px;
+  display: inline;
+}
+.curso,
+.valores {
+  width: 100%;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+button {
+  margin-left: 80vh;
+  border-radius: 5px;
+}
+ a .hist-vendas{
+    
+}
+
+ 
