@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/vendas.css">
+    <title>Vendas Labenu Center</title>
+</head>
+
+<body>
+    <div>
+        <h1>Labenu Center</h1>
+    </div>
+
+    <div id="navegação">
+        <a href="index.html">Página Inicial</a>
+        <a href="ctrl-estoque.html">Controle de Estoque</a>
+        <a href="add-produto.html">Adicionar Produto</a>
+        <a href="funcionarios.html">Funcionários</a>
+        <a href="vendas.html">Vendas</a>
+    </div>
+    <h3>Vendas Labenu Center</h3>
+    <form>
+        <fieldset>
+            <div class="idVendedor">
+                <label>Nome Vendedor</label>
+                <input type="text" name="Nome Vendedor" id="Nome Vendedor" required>
+
+            </div>
+            <div class="idVendedor">
+                <label>Código do Vendedor</label>
+                <input type="text" name="Código do Vendedor" id="Código do Vendedor" required>
+            </div>
+        </fieldset>
+        <div class="curso">
+            <label>Curso Vendido</label>
+
+            <label>
+                <input type="radio" name="curso" value="fullstack" checked required>Fullstack
+            </label>
+            <label>
+                <input type="radio" name="curso" value="frontend" required>Front-end Com React (noturno)
+            </label>
+        </div>
+        <div class="valores">
+            <label>Valor Final</label>
+            <select id="valor final">
+                <option selected disable valeu="">Selecione Forma de Venda</option>
+                <option>Fullstack à vista 14mil</option>
+                <option>Fullstack financiamento 18mil</option>
+                <option>Fullstack ISA 24mil</option>
+            </select>
+        </div>
+    </form>
+    <button type="submit">Enviar Para o Financeiro</button>
+    <footer>
+        <a href="/hist-vendas.html" class="hist-vendas">Histórico de Vendas</a>
+    </footer>
+
+</body>
+
+</html>
