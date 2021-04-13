@@ -1,0 +1,27 @@
+ {
+  grid-column-start: 3;
+  grid-column-start: 5;
+  grid-column-end: 4;
+  grid-column-end: -5;
+  grid-column-end: -2;
+  grid-column-start: -3;
+  grid-column-end: span 2;
+  grid-column-end: span 5;
+  grid-column-start: span 3;
+  grid-column: 4 / 6;
+  grid-column: span 3 / 5;
+  grid-row-start: 3;
+  grid-row: 3 / 6;
+  grid-column: 2;
+  grid-row: 5;
+  grid-column: 2 / 6;
+  grid-row: 1 / 6;
+  grid-area: 4 / 2 / 1 / 6;
+  grid-area: 5 / 3 / 2 / 6;
+  order: 2;
+  order: -1;
+  grid-template-columns: 50%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(3, 100px 3em 40%);
+  grid-template-columns: 1fr 5fr;
+}
