@@ -32,6 +32,9 @@ main{
     margin: 20px;
     
 }
+section{
+    display: grid;
+}
 a, video {
     width: 300px;
 
