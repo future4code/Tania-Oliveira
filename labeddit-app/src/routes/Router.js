@@ -1,39 +1,36 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import Login from '../pages/LoginPage/Login'
 import Register from '../pages/RegisterPage/Register'
 import Feed from '../pages/FeedPage/Feed'
 import Post from '../pages/PostPage/Post'
 import Error from '../pages/ErrorPage/Error'
-import Header from '../components/Header/Header'
 
-const Router = () => {
+
+const Router = ({setRightButtonText}) => {
     return (
-        <BrowserRouter>
-        <Header/>
         <Switch>
             <Route exact path='/'>
-                <Login/>
+                <Login setRightButtonText={setRightButtonText}/>
 
             </Route>
             <Route exact path='/register'>
-                <Register/>
+                <Register setRightButtonText={setRightButtonText}/>
 
             </Route>
             <Route exact path='/feed'>
-                <Feed/>
+                <Feed />
 
             </Route>
             <Route exact path='/post/:id'>
-                <Post/>
+                <Post />
 
             </Route>
             <Route exact path=''>
-                <Error/>
+                <Error />
 
             </Route>
         </Switch>
-        </BrowserRouter>
     )
 }
 

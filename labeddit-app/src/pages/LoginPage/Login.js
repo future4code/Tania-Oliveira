@@ -4,13 +4,16 @@ import { Button } from '@material-ui/core'
 import LoginForm from './LoginForm'
 import { useHistory } from 'react-router-dom'
 import {goToRegister} from '../../routes/coordinator'
+import useUnProtectedPage from '../../hooks/useProtectedPage'
 
-const Login = () => {
-    const history = useHistory
+const Login = ({setRightButtonText}) => {
+    useUnProtectedPage()
+
+    const history = useHistory()
 
     return (
         <ScreenContainer>
-            <LoginForm />
+            <LoginForm setRightButtonText={setRightButtonText}/>
             <SignUpButtonContainer>
                 <Button
                     onClick={() => goToRegister(history)}

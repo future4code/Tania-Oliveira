@@ -1,19 +1,27 @@
 import TextField from '@material-ui/core/TextField'
-import React from 'react'
+import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { InputsContainer } from './styledLogin'
 import useForm from '../../hooks/useForm'
 import { Button } from '@material-ui/core'
+import { login } from "../../services/user"
+import { goToFeed } from '../../routes/coordinator'
 
-const LoginForm = () => {
+
+const LoginForm = ({ setRightButtonText }) => {
     const [form, onChange, clear] = useForm({ email: '', password: '' })
+    const history = useHistory()
+    const [isLoading, setIsLoading] = useState(false)
 
     const onSubmitForm = (event) => {
         event.preventDefault()
+        login(form, clear, history, setRightButtonText, setIsLoading)
     }
+
 
     return (
         <InputsContainer>
-            <form onSubmitForm={onSubmitForm}>
+            <form onSubmit={onSubmitForm}>
                 <TextField
                     name={'email'}
                     value={form.email}
