@@ -2,6 +2,10 @@
 // import React, { useState, useEffect } from 'react'
 // import {BASE_URL} from '../constants/urls'
 import React from "react"
+import PageTitle from '../components/PageTitle'
+import CandidatesList from "../components/PageTrip/CandidatesList"
+import TripInfo from "../components/PageTrip/TripInfoCard"
+import {ContentContatiner} from './TripStyled'
 
 
 const TripDetailsPage = () => {
@@ -21,7 +25,13 @@ const TripDetailsPage = () => {
 
     return (
         <div>
-            <h1>TRIP DETAILS</h1>
+            <PageTitle title={'Detalhes da Viagem'} />
+            <ContentContatiner>
+                <TripInfo />
+                <CandidatesList />
+            </ContentContatiner>
+
+
         </div>
     )
 }

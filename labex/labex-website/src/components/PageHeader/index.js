@@ -1,5 +1,5 @@
 import React from 'react'
-import './HeaderStyled'
+import '../HeaderStyled'
 
 
 function Header() {

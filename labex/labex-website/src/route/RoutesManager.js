@@ -2,15 +2,21 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import HomePage from '../pages/HomePage'
 import ListTripsPage from '../pages/ListTripsPage'
-import ApplicationFormPage from '../pages/ApplicationFormPage'
+import ApplicationFormPage from '../pages/CreateTripListPage'
 import LoginPage from '../pages/LoginPage'
 import AdminHomePage from '../pages/AdminHomePage'
 import TripDetailsPage from '../pages/TripDetailsPage'
-import CreateTripPage from '../pages/CreateTripPage'
+import CreateTripPage from '../pages/ApplicationFormPage'
 import ErrorPage from '../pages/ErrorPage'
+import { AppContainer } from './routesStyled'
+import { MuiPickersUtilsProvider } from '@material-ui/pickers'
+import MomentUtils from '@date-io/moment';
+
 
 const RoutesManager = () => {
     return (
+      <AppContainer>
+        <MuiPickersUtilsProvider utils={MomentUtils}>
         <BrowserRouter>
       <Switch>
 
@@ -40,6 +46,8 @@ const RoutesManager = () => {
         </Route>
       </Switch>
     </BrowserRouter>
+    </MuiPickersUtilsProvider>
+    </AppContainer>
     )
 }
 
