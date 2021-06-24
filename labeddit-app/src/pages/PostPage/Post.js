@@ -1,29 +1,35 @@
 import React from 'react'
-import useProtectedPage from '../../hooks/useProtectedPage'
-import  useResquestData  from '../../hooks/useRequestData'
+import { useParams } from 'react-router-dom'
 import { BASE_URL } from '../../constants/urls'
-import PostCard from '../../components/PostCard/PostCard'
-import { PostListContainer } from './styledPost'
+import useProtectedPage from '../../hooks/useProtectedPage'
+import useRequestData from '../../hooks/useRequestData'
+import { ScreenContainer, PostContainer } from './styledPost'
+import Typography from '@material-ui/core/Typography'
+import Loading from '../../components/Loading/Loading'
 
 const Post = () => {
     useProtectedPage()
+    const params = useParams()
+    const post = useRequestData([], `${BASE_URL}/posts/${params.id}/comments`)
+    
 
-    const posts = useResquestData([], `${BASE_URL}/posts`)
-    const postCards = posts.map((post) => {
-        return (
-            <PostCard
-                key={post.post_id}
-                title={post.title}
-                image={post.image}
-            />
-        )
-    })
 
     return (
-        <PostListContainer>
-            {postCards}
-        </PostListContainer>
+        <div>
+            {post[0] && <h1>{post[0].body}</h1>}
+        </div>
     )
 }
 
 export default Post
+// <ScreenContainer>
+//     {post ?
+//         <PostContainer>
+//             <p>{post.body}</p>
+//             <Typography gutterBottom align={'center'} variant={'h5'} color={'primary'}>{post.body}</Typography>
+//             <Typography align={'center'}>{post.description}</Typography>
+//         </PostContainer>
+//         :
+//         <Loading />
+//     }
+// </ScreenContainer>

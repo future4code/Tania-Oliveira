@@ -5,7 +5,7 @@ import { InputsContainer } from './styledLogin'
 import useForm from '../../hooks/useForm'
 import { Button } from '@material-ui/core'
 import { login } from "../../services/user"
-import { goToFeed } from '../../routes/coordinator'
+
 
 
 const LoginForm = ({ setRightButtonText }) => {

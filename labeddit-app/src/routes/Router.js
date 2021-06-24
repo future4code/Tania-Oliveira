@@ -22,7 +22,7 @@ const Router = ({setRightButtonText}) => {
                 <Feed />
 
             </Route>
-            <Route exact path='/post/:id'>
+            <Route exact path='/posts/:id'>
                 <Post />
 
             </Route>

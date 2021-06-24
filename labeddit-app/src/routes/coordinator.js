@@ -7,6 +7,6 @@ export const goToRegister = (history) =>{
 export const goToFeed = (history) =>{
     history.push('/feed')
 }
-export const goToPost = (history) =>{
-    history.push(`/post/:id`)
+export const goToPost = (history, id) =>{
+    history.push(`/posts/${id}`)
 }

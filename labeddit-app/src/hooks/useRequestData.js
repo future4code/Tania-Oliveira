@@ -12,6 +12,7 @@ const useRequestData = (initialData, url) => {
     })
       .then((response) => {
         setData(response.data)
+        console.log("funcionou", response.data)
       })
       .catch((error) => {
         console.log(error)
