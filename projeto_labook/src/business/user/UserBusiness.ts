@@ -1,3 +1,5 @@
+import { UserDatabase } from "../../data/UserDatabase"
+import { User } from "../../model/User"
 import { HashManager } from "../../services/HashManager"
 import { IdGenerator } from "../../services/IdGenerator"
 import { TokenManager } from "../../services/TokenManager"
@@ -26,7 +28,7 @@ export class UserBusiness {
     })
 
     const tokenManager = new TokenManager()
-    const token = tokenManager.generate({ id })
+    const token = tokenManager.generateToken({ id })
 
     return token
   }
@@ -58,7 +60,7 @@ export class UserBusiness {
     }
 
     const tokenManager = new TokenManager()
-    const token = tokenManager.generate({ id: user.getId() })
+    const token = tokenManager.generateToken({ id: user.getId() })
 
     return token
   }

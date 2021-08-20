@@ -1,9 +1,8 @@
 import jwt from 'jsonwebtoken'
+import authenticationData from './../model/User';
 
 
-export default interface authenticationData{
-  id:string
-}
+
 
 export class TokenManager {
 
@@ -14,7 +13,7 @@ export class TokenManager {
        payload,
        process.env.JWT_KEY as string,
        {
-          expiresIn: process.env.JWT_EXPIRES_IN
+          expiresIn: process.env.ACCESS_TOKEN_EXPIRES_IN
        }
     )
   }

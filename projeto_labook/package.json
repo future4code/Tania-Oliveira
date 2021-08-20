@@ -5,10 +5,9 @@
    "main": "index.js",
    "scripts": {
       "migrations": "tsc && node ./build/migrations.js",
-      "start": "npm run build && node --inspect ./build/src/index.js",
-      "dev": "clear && ts-node-dev ./src/index.ts",
-      "build": "clear && echo \"Transpiling files...\" && tsc && echo \"Done!\" ",
-      "test": "jest"
+      "dev": "ts-node-dev ./src/index.ts",
+      "start": "tsc && node ./build/index.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
    },
    "keywords": [],
    "author": "",
@@ -21,6 +20,8 @@
       "jsonwebtoken": "^8.5.1",
       "knex": "^0.21.5",
       "mysql": "^2.18.1",
+      "react-router": "^5.2.0",
+      "react-router-dom": "^5.2.0",
       "uuid": "^8.3.0"
    },
    "devDependencies": {

@@ -2,6 +2,9 @@ import express, { Express } from 'express'
 import cors from 'cors'
 import { AddressInfo } from "net"
 import { userRouter } from './routes/userRouter';
+import dotenv  from 'dotenv';
+
+dotenv.config()
 
 export const app: Express = express();
 
