@@ -1,19 +1,5 @@
 import TextField from '@material-ui/core/TextField'
-import React from 'react'
-import { InputsContainer } from './styledLogin'
-import useForm from '../../hooks/useForm'
-import { Button } from '@material-ui/core'
 
-const LoginForm = () => {
-    const [form, onChange, clear] = useForm({ email: '', password: '' })
-
-    const onSubmitForm = (event) => {
-        event.preventDefault()
-    }
-
-    return (
-        <InputsContainer>
-            <form onSubmitForm={onSubmitForm}>
                 <TextField
                     name={'email'}
                     value={form.email}
