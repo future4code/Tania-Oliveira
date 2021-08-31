@@ -8,6 +8,7 @@ import { useHistory } from 'react-router-dom'
 
 
 
+ projeto_labook
 const Header = ({rightButtonText, setRightButtonText}) => {
     const token = localStorage.getItem('token')
     const history= useHistory()
@@ -26,11 +27,8 @@ const Header = ({rightButtonText, setRightButtonText}) => {
             goToLogin(history)
         }
     }
-        return (
-        <AppBar position="static">
-            <StyledToolbar>
-                <Button onClick={()=>goToFeed(history)} color="inherit">Lebeddit</Button>
-                <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
+
+
             </StyledToolbar>
         </AppBar>
     )
